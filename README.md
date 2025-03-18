@@ -209,6 +209,29 @@ You're free to specify a center as well, otherwise the marker will be centered.
 
 ***
 
+### Map with resized marker
+
+```javascript
+const marker = {
+  img: `${__dirname}/marker.png`, // can also be a URL
+  offsetX: 12,
+  offsetY: 24,
+  drawWidth: 24,
+  drawHeight: 24,
+};
+
+marker.coord = [13.437524,52.4945528];
+map.addMarker(marker);
+
+await map.render();
+await map.image.save('resized-marker.png');
+```
+
+#### Output
+![Map with resized markers](https://stephangeorg.github.io/staticmaps/sample/resized-marker.png?raw=true)
+
+***
+
 ### Map with multiple marker
 ```javascript
 const marker = {
